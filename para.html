@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q12 - Creating and Removing Elements</title>
+</head>
+<body>
+
+    <h1>Paragraph Manager</h1>
+
+    <!-- Buttons -->
+    <button id="addBtn">Add Paragraph</button>
+    <button id="removeBtn">Remove Last Paragraph</button>
+
+    <!-- Container where paragraphs will be added -->
+    <div id="container"></div>
+
+    <script>
+        // Selecting the container div
+        const container = document.getElementById("container");
+
+        // Selecting buttons
+        const addBtn = document.getElementById("addBtn");
+        const removeBtn = document.getElementById("removeBtn");
+
+        // ADD PARAGRAPH
+        addBtn.addEventListener("click", function () {
+            // 1. Create a new <p> element
+            const para = document.createElement("p");
+
+            // 2. Add text inside the paragraph
+            para.textContent = "This is a new paragraph.";
+
+            // 3. Add this paragraph into the container div
+            container.appendChild(para);
+        });
+
+        // REMOVE LAST PARAGRAPH
+        removeBtn.addEventListener("click", function () {
+            // check if container has any <p> inside
+            if (container.lastChild) {
+                container.removeChild(container.lastChild);
+            }
+        });
+    </script>
+
+</body>
+</html>
