@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .todo {
+            padding: 10px;
+            margin: 8px;
+            background: #f3f3f3;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .completed {
+            color: green;
+            font-weight: bold;
+        }
+        button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 5px 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Todo App</h1>
+    <button id="fetchBtn">Fetch & Save Todos</button>
+
+    <h2>Saved Todos</h2>
+    <div id="todoContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
